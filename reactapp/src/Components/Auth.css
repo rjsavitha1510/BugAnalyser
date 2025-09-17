@@ -1,0 +1,138 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e6f0ff, #cce0ff);
+  padding: 20px;
+  gap: 30px;
+}
+
+.auth-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeInLeft 0.8s ease-in-out;
+}
+
+.auth-form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form-box {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.auth-form-box h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* ---------------- Input Fields ---------------- */
+.auth-form-box input,
+.auth-form-box select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccd9ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.auth-form-box input:focus,
+.auth-form-box select:focus {
+  border-color: #3399ff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 102, 255, 0.25);
+}
+
+/* ---------------- Buttons ---------------- */
+.auth-form-box button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #3399ff;
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+.auth-form-box button:hover {
+  background: #1a75ff;
+}
+
+/* ---------------- Links ---------------- */
+.auth-form-box p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.auth-form-box a {
+  color: #1a75ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-form-box a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 992px) {
+  .auth-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .auth-image img {
+    max-width: 60%;
+    margin-bottom: 20px;
+  }
+}
